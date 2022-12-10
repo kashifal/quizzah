@@ -13,7 +13,7 @@
             store.state.dropdownModule.dropdown ? 'bg-blue-600 transition-all	 text-white' : 'bg-blue-100 transition-all	 text-blue-500'
           "
           @click="openDrop"
-          class="px-3 py-2 rounded text-sm hover:bg-blue-600 transition-all	 text-blue-500 hover:text-white"
+          class="px-3 py-2 rounded text-sm  transition-all	 text-blue-500 hover:text-white"
         >
           Select Your Language
           <span

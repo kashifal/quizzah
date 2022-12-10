@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './pages/Home.vue';
+import Dashboard from './pages/Dashboard.vue';
 import VueApexCharts from "vue3-apexcharts";
 import store from './store/index';
 
@@ -14,9 +15,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-        path:'/',
-        component: Home
-    }
+      path: "/",
+      component: Home,
+    },
+    {
+      path: "/deshboard",
+      component: Dashboard,
+    },
   ],
 });
 
