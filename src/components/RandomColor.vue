@@ -8,7 +8,7 @@
 import {useStore} from 'vuex';
 
 
-const store = useStore(); 
+let store = useStore(); 
 
 function generateRandomColor(){ 
       store.commit('randomColorModule/setColor');  

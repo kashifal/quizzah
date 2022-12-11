@@ -33,13 +33,13 @@
 </template>
 
 <script setup>
-const links = $ref(false);
+let links = $ref(false);
 import { defineProps } from "vue";
 import {useStore} from 'vuex';
 
-const store = useStore();
+let store = useStore();
 
-const props = defineProps({
+let props = defineProps({
   title: String,
   id: Number,
   icon: String,

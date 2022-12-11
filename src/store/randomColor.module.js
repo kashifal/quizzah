@@ -5,11 +5,11 @@ export default {
   },
   mutations: {
     setColor: function (state, payload) {
-      const hue = Math.floor(Math.random() * 255);
-      const saturation = Math.floor(Math.random() * 255);
-      const lightness = Math.floor(Math.random() * 255);
-      const over = Math.floor(Math.random() * 100);
-      const grad = `rgb(${hue}, ${saturation}, ${lightness})`;
+      let hue = Math.floor(Math.random() * 255);
+      let saturation = Math.floor(Math.random() * 255);
+      let lightness = Math.floor(Math.random() * 255);
+      let over = Math.floor(Math.random() * 100);
+      let grad = `rgb(${hue}, ${saturation}, ${lightness})`;
       state.color = grad;
     },
   },

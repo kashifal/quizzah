@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router'; 
+
 import Home from './pages/Home.vue';
-import Dashboard from './pages/Dashboard.vue';
-import VueApexCharts from "vue3-apexcharts";
+import Dashboard from './pages/Dashboard.vue'; 
 import store from './store/index';
 
 
@@ -10,8 +10,8 @@ import './style.css'
 import App from './App.vue'
 
 
-
-const router = createRouter({
+console.log(Dashboard);
+let router = createRouter({
   history: createWebHistory(),
   routes: [
     {
@@ -25,4 +25,4 @@ const router = createRouter({
   ],
 });
 
-createApp(App).use(router).use(VueApexCharts).use(store).mount("#app");
+createApp(App).use(store).use(router).mount("#app");

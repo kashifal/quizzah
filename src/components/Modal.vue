@@ -39,7 +39,7 @@
                 {{ store?.state?.openModalModule?.data[currentQ]?.question }}
               </h1>
             </div>
-            <div class="h-auto w-full grid grid-cols-4 gap-x-4 mt-4">
+            <div class="h-auto w-full grid grid-cols-2 gap-4 mt-4">
               <div
                 v-for="option in store?.state?.openModalModule?.data[currentQ]
                   ?.options"
@@ -48,10 +48,10 @@
                 class="bg-blue-100 hover:text-white hover:bg-blue-500 cursor-pointer text-blue-500 ring-1 ring-blue-500 rounded px-2 py-1"
               >
                 <h1
-                  class="text-sm py-1 cursor-pointer transition-all	"
+                  class="text-[12px] py-1 cursor-pointer transition-all	"
                   @click="
                     checkAnswer(
-                      option?.id,
+                      option?.option,
                       store?.state?.openModalModule?.data[currentQ]?.answer
                     )
                   "
