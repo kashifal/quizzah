@@ -238,9 +238,9 @@
           </h1>
      <ul class="w-full grid grid-cols-5 gap-x-4 py-8">
     
-     <span v-for="tab in strategies" :key="tab.id">
+     <!-- <span v-for="tab in strategies" :key="tab.id">
      <Tab :id="tab.id" :title="tab.title" :paragraph="tab.paragraph" :data="strategies"></Tab>
-     </span>
+     </span> -->
     
      </ul>
   

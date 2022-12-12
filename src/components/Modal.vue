@@ -154,13 +154,13 @@
 </template>
 
 <script setup>
-const currentQ = $ref(0);
+let currentQ = $ref(0);
 import { useStore } from "vuex";
-const test_has_started = $ref(false);
-const test_has_ended = $ref(false);
-const score = $ref(0); 
-const timer = $ref();
-const store = useStore();
+let test_has_started = $ref(false);
+let test_has_ended = $ref(false);
+let score = $ref(0); 
+let timer = $ref();
+let store = useStore();
  
 
 function nextQuestion() {
