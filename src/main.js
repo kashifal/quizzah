@@ -19,7 +19,7 @@ let router = createRouter({
       component: Home,
     },
     {
-      path: "/deshboard",
+      path: "/dashboard",
       component: Dashboard,
     },
   ],

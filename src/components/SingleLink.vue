@@ -2,8 +2,8 @@
   <ul  class="w-full h-full relative">
     <li
       @click="openLink"
-      :class="links ? 'bg-blue-100 text-blue-500' : ''"
-      class="flex items-center hover:bg-blue-100 rounded py-1 px-2 cursor-pointer hover:text-blue-500 justify-start"
+      :class="links ? 'bg-rose-100 text-rose-600' : ''"
+      class="flex items-center hover:bg-rose-100 rounded py-1 px-2 cursor-pointer hover:text-rose-600 justify-start"
     >
       <i :class="icon"></i>
       <span class="ml-4 text-sm font-light">
@@ -19,7 +19,7 @@
     
       :class="
         links
-          ? ' font-light text-sm px-10 cursor-pointer flex hover:bg-blue-100 hover:text-blue-500  py-1 rounded'
+          ? ' font-light text-sm px-10 cursor-pointer flex hover:bg-rose-100 hover:text-rose-600  py-1 rounded'
           : 'hidden'
       "
       v-for="link in sub_links"

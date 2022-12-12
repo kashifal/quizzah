@@ -1,49 +1,47 @@
 <template>
   <div class="overflow-x-hidden w-full pt-10">
-    <div class="max-w-5xl mx-auto w-full h-auto pb-16 grid grid-cols-2">
+    <div class="max-w-5xl mx-auto w-full h-auto pb-16 grid grid-cols-1">
       <div class="">
         <h1
-          class="text-5xl font-semibold text-left leading-snug text-gray-700 mt-16"
+          class="text-5xl font-semibold text-center leading-snug text-gray-700 mt-16"
         >
           We make coding
-          <span class="text-blue-500">interviews Easy </span> <br />
+          <span class="">interviews Easy </span> <br />
           for you
-          <span
-            class="text-sm font-light px-2 py-1 bg-blue-100 text-blue-500 rounded-full"
-            >100%</span
-          >
+          <!-- <span
+            class="text-sm font-light px-2 py-1 bg-rose-100  rounded-full"
+            >100%</span -->
+          <!-- > -->
         </h1>
         <div class="">
           <p
-            class="font-light text-lg text-gray-700 max-w-2xl mx-auto mt-8 text-left"
+            class="font-light text-lg text-gray-600 max-w-2xl mx-auto mt-8 text-center"
           >
             Welcome to Programming Interview Quizzet! Test your coding
-            knowledge and skills with our challenging questions. Prove your
-            worth as a programmer and rise to the top of the leaderboard. Are
-            you ready to take on the ultimate programming challenge?
+            knowledge and skills with our challenging questions.
           </p>
         </div>
-        <div class="mt-8 w-full h-auto flex items-center justify-start gap-x-4">
+        <div class="mt-8 w-full h-auto flex items-center justify-center gap-x-4">
           <button
             @click="openQuiz()"
-            class="bg-blue-500 text-white px-4 rounded hover:text-white py-2"
+            class="bg-rose-600 text-white px-4 rounded hover:text-white py-2"
           >
             <i class="fa fa-play"></i> <span class="ml-2">Start Quiz</span>
           </button>
           <button
-            class="bg-blue-100 hover:bg-blue-500 hover:text-white px-4 rounded ring-1 ring-blue-500 text-blue-500 py-2"
+            class=" hover:bg-rose-600 hover:text-white px-4 rounded ring-1 ring-rose-600 text-rose-600 py-2"
           >
             <i class="fa fa-dashboard"></i><span class="ml-2">My Stats</span>
           </button>
         </div>
       </div>
-      <div class="w-full h-full flex items-center justify-center">
+      <div class="w-full hidden h-full flex items-center justify-center">
         <img :src="header_img" class="w-[70%] mx-auto" alt="" />
       </div>
     </div>
-    <div class="max-w-5xl mx-auto mt-12 h-auto">
+    <div class="max-w-5xl mx-auto  h-auto">
       <div class="">
-        <h1 class="font-bold text-blue-500">Reviews From Students</h1>
+        <h1 class="font-semibold text-[#0d2234]">Reviews From Students</h1>
       </div>
     </div>
 
@@ -51,11 +49,11 @@
 
     <!--  -->
     <!--  -->
-    <div class="w-full h-auto bg-blue-500 mt-24">
-      <div class="max-w-5xl mx-auto h-auto pt-16 pb-16">
+    <div class="w-full h-auto  mt-24">
+      <div class="max-w-5xl mx-auto h-auto ">
         <div class="max-w-full mx-auto">
           <h1
-            class="text-5xl font-semibold text-center leading-snug text-white"
+            class="  font-semibold text-left leading-snug text-[#0d2234]"
           >
             Your private dashboard
           </h1>
@@ -64,25 +62,25 @@
           class="grid grid-cols-1 max-w-5xl ml-auto md:grid-cols-3 mt-10 gap-x-4"
         >
           <li
-            class="h-auto w-auto bg-white rounded px-2 font-light text-sm py-2 flex items-center"
+            class="h-auto w-auto shadow-sm bg-white rounded px-2 font-light text-sm py-2 flex items-center"
           >
             <span><i class="fa fa-dashboard text-green-600"></i></span>
             <span class="ml-2"> Test Clear Rate</span>
-            <span class="text-red-500 ml-auto"
+            <span class="text-rose-600 ml-auto"
               ><i class="fa fa-angle-down"></i> 45/100 %</span
             >
           </li>
           <li
-            class="h-auto w-auto bg-white rounded px-2 font-light text-sm py-2 flex items-center"
+            class="h-auto w-auto shadow-sm bg-white rounded px-2 font-light text-sm py-2 flex items-center"
           >
-            <span><i class="fa fa-globe text-blue-600"></i></span>
+            <span><i class="fa fa-globe text-rose-600"></i></span>
             <span class="ml-2"> Your Ranking</span>
             <span class="text-green-500 ml-auto"
               ><i class="fa fa-angle-up"></i> 767</span
             >
           </li>
           <li
-            class="h-auto w-auto bg-white rounded px-2 font-light text-sm py-2 flex items-center"
+            class="h-auto shadow-sm w-auto bg-white rounded px-2 font-light text-sm py-2 flex items-center"
           >
             <span><i class="fa fa-dashboard text-green-600"></i></span>
             <span class="ml-2"> Javascript</span>
@@ -93,11 +91,11 @@
         </ul>
       </div>
     </div>
-    <div class="w-full h-auto pb-16">
+    <div class="w-full shadow-sm h-auto pb-16 mt-24">
       <div class="max-w-5xl h-auto pt-10 mx-auto">
-        <div class="max-w-2xl mx-auto">
+        <div class="max-w-5xl mx-auto">
           <h1
-            class="text-5xl font-semibold text-center leading-snug text-blue-500"
+            class=" font-semibold text-left leading-snug text-[#0d2234]"
           >
             Why you should take quiz ?
           </h1>
@@ -105,7 +103,7 @@
         <div
           class="max-w-full h-auto mx-auto grid grid-cols-2 gap-x-4 sm:grid-cols-3 lg:grid-cols-4 pt-8"
         >
-          <div class="card__quiz px-3 relative py-4 bg-blue-500 rounded">
+          <div class="card__quiz px-3 relative py-4 gradient__bg bg-rose-600 rounded">
           <p class="absolute text-5xl text-outline text-white shadow-sm one  right-2">01</p>
             <div class="w-full h-auto flex items-center justify-start">
               <svg
@@ -130,7 +128,7 @@
               </p>
             </div>
           </div>
-           <div class="card__quiz px-3 relative py-4 bg-blue-500 rounded">
+           <div class="card__quiz px-3 relative py-4 bg-rose-600 gradient__bg rounded">
           <p class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2">02</p>
 
             <div class="w-full h-auto flex items-center justify-start">
@@ -145,7 +143,7 @@
               </p>
             </div>
           </div>
-           <div class="card__quiz px-3 relative py-4 bg-blue-500 rounded">
+           <div class="card__quiz px-3 relative py-4 bg-rose-600 gradient__bg rounded">
           <p class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2">03</p>
 
             <div class="w-full h-auto flex items-center justify-start">
@@ -162,7 +160,7 @@
               </p>
             </div>
           </div>
-           <div class="card__quiz px-3 py-4 bg-blue-500 relative rounded">
+           <div class="card__quiz px-3 py-4 bg-rose-600 gradient__bg relative rounded">
           <p class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2">04</p>
 
             <div class="w-full h-auto flex items-center justify-start">

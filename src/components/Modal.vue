@@ -23,7 +23,7 @@
           >
            <div class="flex w-full justify-start gap-x-4 items-center">
             <div
-              class="h-10 min-w-10 flex items-center justify-center ring-1 bg-blue-500 ring-blue-500 px-4 text-white rounded-full"
+              class="h-10 min-w-10 flex items-center justify-center ring-1 bg-rose-600 ring-rose-600 px-4 text-white rounded-full"
             >
               <p>
                 <span class="">Q{{ currentQ + 1 }}</span> / Q{{
@@ -32,7 +32,7 @@
               </p>
             
             </div>
-            <div class="mr-32 ring-1 px-4 py-2  w-20 rounded-full" :class="timer < 10 ? 'ring-1 ring-rose-500 bg-rose-500 text-white' : 'ring-blue-500 ring-1 text-blue-500'" style="z-index:1000000;">  <p>{{timer}}</p></div>
+            <div class="mr-32 ring-1 px-4 py-2  w-20 rounded-full" :class="timer < 10 ? 'ring-1 ring-rose-500 bg-rose-500 text-white' : 'ring-rose-600 ring-1 text-rose-600'" style="z-index:1000000;">  <p>{{timer}}</p></div>
            </div>
             <div class="mt-4 text-start">
               <h1>
@@ -45,7 +45,7 @@
                   ?.options"
                 :key="option.id"
                 @click="nextQuestion"
-                class="bg-blue-100 hover:text-white hover:bg-blue-500 cursor-pointer text-blue-500 ring-1 ring-blue-500 rounded px-2 py-1"
+                class="bg-rose-100 hover:text-white hover:bg-rose-600 cursor-pointer text-rose-600 ring-1 ring-rose-600 rounded px-2 py-1"
               >
                 <h1
                   class="text-[12px] py-1 cursor-pointer transition-all	"
@@ -97,14 +97,14 @@
             <div
             @click="startTest()"
             :class="store.state.openModalModule.data.length <= 0 ? 'hidden' : 'block'"
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-blue-500 rounded bg-blue-100 text-blue-500 transition-all	 hover:text-white hover:bg-blue-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-rose-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               Start Test <i class="fa fa-angle-double-right"></i>
             </div>
             <div
             @click="endTest()"
             :class="store.state.openModalModule.data.length <= 0 ? 'block' : 'hidden'"
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-blue-500 rounded bg-blue-100 text-blue-500 transition-all	 hover:text-white hover:bg-blue-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-rose-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               close Modal <i class="fa fa-angle-double-right"></i>
             </div>
@@ -133,16 +133,16 @@
               You have  {{score }} correct  out of {{store.state.openModalModule.data.length}} Questions... 
               
               <br />
-              <span :class="((score/store.state.openModalModule.data.length) * 100) >= 70 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-red-600 px-1 py-1'">Results <i  class="fa fa-angle-double-right"></i> {{((score/store.state.openModalModule.data.length) * 100).toFixed(0)}}/100  %</span>
+              <span :class="((score/store.state.openModalModule.data.length) * 100) >= 70 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-rose-600 px-1 py-1'">Results <i  class="fa fa-angle-double-right"></i> {{((score/store.state.openModalModule.data.length) * 100).toFixed(0)}}/100  %</span>
               <br />
-              <span :class="((score/store.state.openModalModule.data.length) * 100) >= 50 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-red-600 px-1 py-1'">{{((score/store.state.openModalModule.data.length) * 100) > 50 ? 'Passed Congrats' : 'Failed'}}</span>
+              <span :class="((score/store.state.openModalModule.data.length) * 100) >= 50 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-rose-600 px-1 py-1'">{{((score/store.state.openModalModule.data.length) * 100) > 50 ? 'Passed Congrats' : 'Failed'}}</span>
               </h1>
             </div>
              
              
             <div
             @click="endTest()"
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-blue-500 rounded bg-blue-100 text-blue-500 transition-all	 hover:text-white hover:bg-blue-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-rose-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               Give another shot <i class="fa fa-angle-double-right"></i>
             </div>

@@ -31,3 +31,9 @@
   font-size: 50px !important;
   -webkit-text-stroke-color: #eff6ff !important;
 }
+
+.gradient__bg
+{
+background: rgb(159,18,57);
+background: linear-gradient(90deg, rgba(159,18,57,1) 0%, rgba(244,63,94,1) 100%);
+}
