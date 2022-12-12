@@ -93,7 +93,7 @@
         </ul>
       </div>
     </div>
-    <div class="w-full shadow-sm h-auto pb-16 mt-24">
+    <div class="w-full   h-auto relative   mt-24">
       <div class="max-w-5xl h-auto pt-10 mx-auto">
         <div class="max-w-5xl mx-auto">
           <h1 class="font-semibold text-left leading-snug text-2xl text-[#0d2234]">
@@ -231,6 +231,21 @@
         </div>
       </div>
     </div>
+    <div class="w-full   mt-24 h-[80vh]">
+    <div class="max-w-5xl mx-auto h-auto"> 
+          <h1 class="font-semibold text-left leading-snug text-2xl text-[#0d2234]">
+            Top Strategies to Solve Programming Problem
+          </h1>
+     <ul class="w-full grid grid-cols-5 gap-x-4 py-8">
+    
+     <span v-for="tab in strategies" :key="tab.id">
+     <Tab :id="tab.id" :title="tab.title" :paragraph="tab.paragraph" :data="strategies"></Tab>
+     </span>
+    
+     </ul>
+  
+    </div>
+    </div>
   </div>
 </template>
 
@@ -239,12 +254,44 @@ import Scroller from "../components/Scroller.vue";
 import Footer from "../components/Footer.vue";
 import header_img from "../assets/header_image-5.png";
 import { useStore } from "vuex";
+import Tab from '../components/Tab.vue';
 
 let store = useStore();
 
 function openQuiz() {
   store.commit("dropdownModule/setDropdown");
 }
+
+
+
+const strategies = [
+  {
+    id:1,
+    title: "Break the problem ",
+    paragraph: "Complex problems can be overwhelming, so it's important to break them down into smaller, more manageable pieces. This will help you focus on one aspect of the problem at a time and avoid getting bogged down by the overall complexity."
+  },
+  {
+    id:2,
+    title: "Use pseudo-code ",
+    paragraph: "Writing out your solution in plain language can help you clarify your thoughts and identify any potential issues before you start writing actual code. This process, known as pseudo-coding, can help you organize your thoughts and plan out your approach."
+  },
+  {
+    id:3,
+    title: "Research and learn",
+    paragraph: "If you're stuck on a problem, it can be helpful to search for similar problems and solutions online. Many programming communities, such as forums and online groups, are filled with experienced developers who are willing to help and share their knowledge."
+  },
+  {
+    id:4,
+    title: "Test your code",
+    paragraph: "As you're writing your code, it's important to test it regularly to ensure that it's working as intended. This will help you identify and fix any errors or issues as they arise, rather than trying to debug a large, complex program all at once."
+  },
+  {
+    id:5,
+    title: "Ask for help",
+    paragraph: "If you're truly stuck and unable to figure out a solution on your own, don't be afraid to ask for help. Many experienced programmers are happy to help others, and seeking out their advice can save you time and frustration in the long run."
+  }
+];
+
 </script>
 
 <style scoped></style>
