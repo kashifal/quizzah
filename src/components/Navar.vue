@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white shadow-sm">
+  <div class="w-full bg-white shadow-sm sticky top-0">
     <div class="h-16 max-w-6xl mx-auto flex items-center justify-between">
       <div class="">
         <a href="/"
@@ -7,6 +7,9 @@
         >
       </div>
       <div class="flex items-center gap-x-4">
+      <ul>
+      <li class="text-sm text-custom-text font-light px-2 py-2 hover:bg-rose-600 hover:text-white rounded cursor-pointer shadow"><i class="fa fa-trophy"></i> Leadersboard </li>
+      </ul>
       <div class="relative">
         <button
           :class="

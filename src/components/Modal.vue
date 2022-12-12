@@ -45,7 +45,7 @@
                   ?.options"
                 :key="option.id"
                 @click="nextQuestion"
-                class="bg-rose-100 hover:text-white hover:bg-rose-600 cursor-pointer text-rose-600 ring-1 ring-rose-600 rounded px-2 py-1"
+                class=" hover:text-white hover:bg-rose-600 cursor-pointer text-rose-600 ring-1 ring-rose-600 rounded px-2 py-1"
               >
                 <h1
                   class="text-[12px] py-1 cursor-pointer transition-all	"
@@ -65,7 +65,7 @@
             @click="nextQuestion()"
               class="mt-6 px-3 py-1   ml-auto   transition-all text-right	 rounded   text-rose-500 hover:text-rode-600  cursor-pointer"
             >
-             <span class="ring-1 ring-rose-500 px-2 py-1 rounded bg-rose-100 hover:bg-rose-500 hover:text-white"> Skip <i class="fa fa-angle-double-right"></i></span>
+             <span class="ring-1 ring-rose-500 px-2 py-1 rounded bg-white hover:bg-rose-500 hover:text-white"> Skip <i class="fa fa-angle-double-right"></i></span>
               <br>
               <span class="text-[10px]">Note: You will get 0 score if skip question</span>
             </div>
@@ -97,14 +97,14 @@
             <div
             @click="startTest()"
             :class="store.state.openModalModule.data.length <= 0 ? 'hidden' : 'block'"
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-rose-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-white text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               Start Test <i class="fa fa-angle-double-right"></i>
             </div>
             <div
             @click="endTest()"
             :class="store.state.openModalModule.data.length <= 0 ? 'block' : 'hidden'"
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-rose-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-red-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               close Modal <i class="fa fa-angle-double-right"></i>
             </div>
@@ -142,7 +142,7 @@
              
             <div
             @click="endTest()"
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-rose-100 text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-white text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               Give another shot <i class="fa fa-angle-double-right"></i>
             </div>

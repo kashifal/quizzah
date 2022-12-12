@@ -1,6 +1,6 @@
 <template>
   <div
-    class="scroll h-full w-full mt-4 py-2 overflow-x-scroll flex flex-nowrap overflow-y-hidden mx-auto gap-x-4"
+    class="scroll h-full w-full  py-2 overflow-x-scroll flex flex-nowrap overflow-y-hidden mx-auto gap-x-4"
   >
     <div class="card gap-x-2 h-full break-words flex shadow p-4 rounded">
       <div class="h-full w-auto bg-blue-400 rounded-full inline-flex">

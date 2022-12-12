@@ -25,7 +25,7 @@
    <div class="max-w-5xl h-auto grid grid-cols-1 mx-auto ">
    <div class="w-full h-48 bg-rose-600 gradient__bg rounded"></div>
    </div>
-   <div class="max-w-5xl h-auto grid grid-cols-1 py-12 mx-auto ">
+   <div class="max-w-5xl h-auto grid grid-cols-1 mt-24 mx-auto ">
      <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
@@ -67,15 +67,19 @@
   </div>
    
    </div>
+   <div class="mt-24 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2">
+   <div class="">
+   
+   </div>
+   <h1>kashif</h1>
+   </div>
    </div>
 </template>
 
 <script setup> 
-import Chart from '../components/Chart.vue';
-const people = [
-  { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-  // More people...
-]
+import { D3BarChart } from 'vue-d3-charts';
+
+ 
 </script>
 
 <style scoped>
