@@ -54,7 +54,8 @@ function showme(data){
   store.commit('openModalModule/setModal', data);
 
   console.log(data && data);
-  console.log(store.state.openModalModule);
+  console.log(store.state.openModalModule); 
+
 
 }
 

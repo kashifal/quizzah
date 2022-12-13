@@ -6,6 +6,11 @@
 *{
   font-family: 'Sora', sans-serif;
 }
+
+body
+{
+  background-color: #f3f4f6;
+}
 .scroll
 {
   width: 1024px;
@@ -43,6 +48,8 @@ background: linear-gradient(90deg, rgba(159,18,57,1) 0%, rgba(244,63,94,1) 100%)
   animation: kashif 3s linear infinite;
   transform: rotate(-10deg);
 }
+
+
 
 
 /* @keyframes kashif {

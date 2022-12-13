@@ -1,5 +1,5 @@
 <template>
-   <div class="w-full h-auto bg-gray-100">
+   <div class="w-full h-full " style="height:100% !important;">
    <div class="max-w-5xl mx-auto h-full flex items-center pt-12 pb-12 justify-between">
     
    <div class="flex gap-x-4 ">
@@ -25,7 +25,7 @@
    <div class="max-w-5xl h-auto grid grid-cols-1 mx-auto ">
    <div class="w-full h-48 bg-rose-600 gradient__bg rounded"></div>
    </div>
-   <div class="max-w-5xl h-auto grid grid-cols-1 mt-24 mx-auto ">
+   <div class="max-w-5xl h-auto grid grid-cols-1 mt-24 mx-auto " :class="store.state.quizHistoryModule.quiz_history.length === 0 ? 'hidden' : 'block' ">
      <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
@@ -44,28 +44,21 @@
                   <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 lg:pl-8">Language / Framework</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Result</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Percentage</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Progress</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Download Certificate</th>
                    
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white">
-                <tr>
-                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-left text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">JS / REACT</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500">Passed</td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500">70%</td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500"><i class="fa fa-angle-double-up text-green-500"></i></td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500"><i class="fa text-sm fa-download text-rose-600"></i></td>
+                <tr v-for="history in store.state.quizHistoryModule.quiz_history" :key="history.score">
+                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-left text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">{{history.language.language}}</td>
+                  <td class="whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500">{{history.percentage >= 60 ? 'Passed' : 'Failed'}}</td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500">{{history.percentage.toFixed(1)}}%</td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500"><i :class="history.percentage >= 60 ? 'fa text-sm fa-angle-double-up text-green-600' : 'fa text-sm fa-angle-double-down text-rose-600'"></i></td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500"><i :class="history.percentage >= 60 ? 'fa text-sm fa-download text-green-600' : 'fa text-sm fa-refresh text-rose-600'"></i></td>
                  
                 </tr>
-                 <tr>
-                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-left text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">PHP / LARAVEL</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500">Failed</td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500">40%</td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500"><i class="fa fa-angle-double-down text-red-500"></i></td>
-                  <td @click="openDailog()"  class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500"><i class="fa text-sm fa-refresh text-rose-600"></i></td>
                  
-                </tr>
               </tbody>
             </table>
           </div>
@@ -77,9 +70,7 @@
    </div>
    <div class="mt-24 max-w-5xl gap-8 mx-auto grid grid-cols-2 md:grid-cols-2">
    
-  <Pie></Pie> 
-  <Pie></Pie> 
-  <!-- <Bar></Bar>   -->
+ 
    
    
    </div>
@@ -87,14 +78,12 @@
 </template>
 
 <script setup>  
-import { useStore } from "vuex";
-import Pie from '../components/Pie.vue';
-
-// import Bar from '../components/Bar.vue';
+import { useStore } from "vuex"; 
 
 
 
 const store = useStore();
+const HistoryOfQuiz = store.state.quizHistoryModule.quiz_history;
 
 
 function openDailog(){

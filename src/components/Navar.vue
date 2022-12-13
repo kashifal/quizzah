@@ -73,6 +73,9 @@ let langs = [
         title: "React",
         id: 1,
         questionList : [
+          {
+            language:'JS/REACT'
+          },
   {
     id: 1,
     question: "What is ReactJS?",
@@ -171,7 +174,23 @@ let langs = [
       {
         title: "Laravel",
         id: 1,
-        questionList:[]
+        questionList:[
+
+          {
+            language:'JS/REACT'
+          },
+  {
+    id: 1,
+    question: "What is Laravel?",
+    answer: "A JavaScript library for building user interfaces",
+    options: [
+      { id: 1, option: "A programming language" },
+      { id: 2, option: "A framework for web development" },
+      { id: 3, option: "A JavaScript library for building user interfaces" },
+      { id: 4, option: "A database management system" }
+    ]
+  }
+        ]
       },
       {
         title: "Blade",

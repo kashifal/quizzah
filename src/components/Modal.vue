@@ -26,8 +26,8 @@
               class="h-10 min-w-10 flex items-center justify-center ring-1 bg-rose-600 ring-rose-600 px-4 text-white rounded-full"
             >
               <p>
-                <span class="">Q{{ currentQ + 1 }}</span> / Q{{
-                  store.state.openModalModule.data.length
+                <span class="">Q{{ currentQ  }}</span> / Q{{
+                  store.state.openModalModule.data.length - 1
                 }}
               </p>
             
@@ -140,11 +140,15 @@
             </div>
              
              
+            <div class="flex ml-auto gap-x-2 ">
             <div
-            @click="endTest()"
+            @click="endTest(score,store.state.openModalModule.data.length,store.state.openModalModule.data[0])"
               class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded bg-white text-rose-600 transition-all	 hover:text-white hover:bg-rose-600 cursor-pointer"
             >
               Give another shot <i class="fa fa-angle-double-right"></i>
+            </div>
+            
+            
             </div>
           </div>
         </div>
@@ -154,7 +158,7 @@
 </template>
 
 <script setup>
-let currentQ = $ref(0);
+let currentQ = $ref(1);
 import { useStore } from "vuex";
 let test_has_started = $ref(false);
 let test_has_ended = $ref(false);
@@ -209,16 +213,22 @@ function checkAnswer(chosed, answer) {
 }
 
 
-function endTest(){
+console.log('quizHistoryModule/setHistory');
+
+function endTest(score,total,lang){
   store.commit('openModalModule/setModal',[]);
+  store.commit('quizHistoryModule/setHistory',{score: score, total:total, percentage: score/total * 100, language:lang});
   test_has_ended = false;
- currentQ = 0;
+ currentQ = 1;
 test_has_started = false;
 timer = 15;
- score = 0; 
-  store.commit('dropdownModule/setDropdown');
+ score = 0;  
+
 
 }
+
+
+ 
 </script>
 
 <style scoped></style>

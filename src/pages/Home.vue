@@ -10,7 +10,7 @@
           class="text-5xl font-semibold text-center leading-snug text-gray-700 mt-16"
         >
           We make coding
-          <span class="bg-custom-primary text-white px-1">interviews Easy </span> <br />
+          <span class="bg-custom-primary  text-white px-1">interviews Easy </span> <br />
           for you
         </h1>
         <div class="">
