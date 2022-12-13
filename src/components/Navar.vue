@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-white shadow-sm sticky top-0 z-50">
-    <div class="h-16 max-w-6xl mx-auto flex items-center justify-between">
+    <div class="h-16 max-w-5xl mx-auto flex items-center justify-between">
       <div class="">
         <a href="/"
           > CodeQuest <span class="text-sm text-rose-600">.io</span></a

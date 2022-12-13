@@ -1,5 +1,5 @@
 <template>
-   <div class="w-full h-auto">
+   <div class="w-full h-auto bg-gray-100">
    <div class="max-w-5xl mx-auto h-full flex items-center pt-12 pb-12 justify-between">
     
    <div class="flex gap-x-4 ">
@@ -58,6 +58,14 @@
                   <td class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500"><i class="fa text-sm fa-download text-rose-600"></i></td>
                  
                 </tr>
+                 <tr>
+                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-left text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">PHP / LARAVEL</td>
+                  <td class="whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500">Failed</td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500">40%</td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500"><i class="fa fa-angle-double-down text-red-500"></i></td>
+                  <td @click="openDailog()"  class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500"><i class="fa text-sm fa-refresh text-rose-600"></i></td>
+                 
+                </tr>
               </tbody>
             </table>
           </div>
@@ -67,17 +75,31 @@
   </div>
    
    </div>
-   <div class="mt-24 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2">
-   <div class="">
+   <div class="mt-24 max-w-5xl gap-8 mx-auto grid grid-cols-2 md:grid-cols-2">
    
-   </div>
-   <h1>kashif</h1>
+  <Pie></Pie> 
+  <Pie></Pie> 
+  <!-- <Bar></Bar>   -->
+   
+   
    </div>
    </div>
 </template>
 
 <script setup>  
+import { useStore } from "vuex";
+import Pie from '../components/Pie.vue';
 
+// import Bar from '../components/Bar.vue';
+
+
+
+const store = useStore();
+
+
+function openDailog(){
+  store.commit('dropdownModule/setDropdown');
+}
  
 </script>
 

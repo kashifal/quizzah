@@ -1,17 +1,17 @@
 <template>
-  <div class="overflow-x-hidden w-full pt-20">
+  <div class="overflow-x-hidden bg-gray-100 w-full pt-20 relative">
+  
     <div class="max-w-5xl mx-auto w-full h-auto pb-16 grid grid-cols-1">
-      <div class="">
+      <div class="relative">
+      <div class="absolute  animate-rotate-half right-0">
+  <img class="w-24" :src='gift' alt="">
+  </div>
         <h1
           class="text-5xl font-semibold text-center leading-snug text-gray-700 mt-16"
         >
           We make coding
-          <span class="">interviews Easy </span> <br />
+          <span class="bg-custom-primary text-white px-1">interviews Easy </span> <br />
           for you
-          <!-- <span
-            class="text-sm font-light px-2 py-1 bg-rose-100  rounded-full"
-            >100%</span -->
-          <!-- > -->
         </h1>
         <div class="">
           <p
@@ -39,9 +39,7 @@
           </router-link>
         </div>
       </div>
-      <!-- <div class="w-full hidden h-full flex items-center justify-center">
-        <img :src="header_img" class="w-[70%] mx-auto" alt="" />
-      </div> -->
+     
     </div>
     <div class="max-w-5xl mx-auto mt-24 h-auto">
       <div class="">
@@ -93,7 +91,7 @@
         </ul>
       </div>
     </div>
-    <div class="w-full   h-auto relative   mt-24">
+    <div class="w-full   h-auto relative   mt-24 pb-12">
       <div class="max-w-5xl h-auto pt-10 mx-auto">
         <div class="max-w-5xl mx-auto">
           <h1 class="font-semibold text-left leading-snug text-2xl text-[#0d2234]">
@@ -231,21 +229,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full   mt-24 h-[80vh]">
-    <div class="max-w-5xl mx-auto h-auto"> 
-          <h1 class="font-semibold text-left leading-snug text-2xl text-[#0d2234]">
-            Top Strategies to Solve Programming Problem
-          </h1>
-     <ul class="w-full grid grid-cols-5 gap-x-4 py-8">
-    
-     <!-- <span v-for="tab in strategies" :key="tab.id">
-     <Tab :id="tab.id" :title="tab.title" :paragraph="tab.paragraph" :data="strategies"></Tab>
-     </span> -->
-    
-     </ul>
-  
-    </div>
-    </div>
+
   </div>
 </template>
 
@@ -253,6 +237,7 @@
 import Scroller from "../components/Scroller.vue";
 import Footer from "../components/Footer.vue";
 import header_img from "../assets/header_image-5.png";
+import gift from "../assets/gift.png";
 import { useStore } from "vuex";
 import Tab from '../components/Tab.vue';
 
