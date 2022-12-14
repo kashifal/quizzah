@@ -47,17 +47,14 @@
                 @click="nextQuestion"
                 class=" hover:text-white hover:bg-rose-600 cursor-pointer text-rose-600 ring-1 ring-rose-600 rounded px-2 py-1"
               >
-                <h1
+                <button
                   class="text-[12px] py-1 cursor-pointer transition-all	"
                   @click="
-                    checkAnswer(
-                      option?.option,
-                      store?.state?.openModalModule?.data[currentQ]?.answer
-                    )
+                    checkAnswer(option?.id,store?.state?.openModalModule?.data[currentQ]?.answer)
                   "
                 >
                   {{ option?.option }}
-                </h1>
+                </button>
               </div>
             </div>
             
@@ -130,12 +127,12 @@
             
             <div class="mt-4 text-start">
               <h1>
-              You have  {{score }} correct  out of {{store.state.openModalModule.data.length}} Questions... 
+              You have  {{score }} correct  out of {{store.state.openModalModule.data.length - 1}} Questions... 
               
               <br />
-              <span :class="((score/store.state.openModalModule.data.length) * 100) >= 70 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-rose-600 px-1 py-1'">Results <i  class="fa fa-angle-double-right"></i> {{((score/store.state.openModalModule.data.length) * 100).toFixed(0)}}/100  %</span>
+              <span :class="((score/store.state.openModalModule.data.length - 1) * 100) >= 70 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-rose-600 px-1 py-1'">Results <i  class="fa fa-angle-double-right"></i> {{((score/(store.state.openModalModule.data.length - 1)) * 100).toFixed(0)}}/100  %</span>
               <br />
-              <span :class="((score/store.state.openModalModule.data.length) * 100) >= 50 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-rose-600 px-1 py-1'">{{((score/store.state.openModalModule.data.length) * 100) > 50 ? 'Passed Congrats' : 'Failed'}}</span>
+              <span :class="((score/store.state.openModalModule.data.length-1) * 100) >= 50 ? 'bg-rose-500 px-1 py-1 text-white' : 'bg-gray-400 text-rose-600 px-1 py-1'">{{((score/(store.state.openModalModule.data.length - 1)) * 100) > 50 ? 'Passed Congrats' : 'Failed'}}</span>
               </h1>
             </div>
              
@@ -188,24 +185,26 @@ function nextQuestion() {
     store.commit("randomColorModule/setColor");
    
     
-  } else{     
-    //comment are fine 
+  } else{      
  test_has_ended = true;   
  
   }
-    timer = 15;
-    console.log(timer);
+    timer = 15; 
   }
 }, 1000); 
 
 function startTest(){
   test_has_started = true;
- timer = 15;
+ timer = 15; 
+ score = 0; 
 } 
 
 function checkAnswer(chosed, answer) {
+ 
+  console.log('chosed, realanswer',chosed, answer);
   if (chosed === answer) {
     score = score + 1;
+    
   } else {
     score = score ;
   }
@@ -217,7 +216,7 @@ console.log('quizHistoryModule/setHistory');
 
 function endTest(score,total,lang){
   store.commit('openModalModule/setModal',[]);
-  store.commit('quizHistoryModule/setHistory',{score: score, total:total, percentage: score/total * 100, language:lang});
+  store.commit('quizHistoryModule/setHistory',{score: score, total:total-1, percentage: score/total * 100, language:lang});
   test_has_ended = false;
  currentQ = 1;
 test_has_started = false;

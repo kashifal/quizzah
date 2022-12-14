@@ -2,9 +2,10 @@
   <div class="w-full bg-white shadow-sm sticky top-0 z-50">
     <div class="h-16 max-w-5xl mx-auto flex items-center justify-between">
       <div class="">
-        <a href="/"
-          > CodeQuest <span class="text-sm text-rose-600">.io</span></a
-        >
+        
+        <router-link to="/">
+           CodeQuest <span class="text-sm text-rose-600">.io</span>
+          </router-link>
       </div>
       <div class="flex items-center gap-x-4">
       <ul>
@@ -79,7 +80,7 @@ let langs = [
   {
     id: 1,
     question: "What is ReactJS?",
-    answer: "A JavaScript library for building user interfaces",
+    answer: 3,
     options: [
       { id: 1, option: "A programming language" },
       { id: 2, option: "A framework for web development" },
@@ -90,7 +91,7 @@ let langs = [
   {
     id: 2,
     question: "What is a component in ReactJS?",
-    answer: "A piece of the user interface",
+    answer:1,
     options: [
       { id: 1, option: "A piece of the user interface" },
       { id: 2, option: "A function or class that returns a React element" },
@@ -101,7 +102,7 @@ let langs = [
   {
     id: 3,
     question: "What is the virtual DOM in ReactJS?",
-    answer: "A virtual representation of the user interface",
+    answer: 1,
     options: [
       { id: 1, option: "A virtual representation of the user interface" },
       { id: 2, option: "A function that handles events in the application" },
@@ -112,7 +113,7 @@ let langs = [
   {
     id: 4,
     question: "What is JSX?",
-    answer: "A syntax extension to JavaScript",
+    answer: 2,
     options: [
       { id: 1, option: "A way to create HTML elements in JavaScript" },
       { id: 2, option: "A syntax extension to JavaScript" },
@@ -123,7 +124,7 @@ let langs = [
   {
     id: 5,
     question: "What is the purpose of the render() method in a React component?",
-    answer: "To return a React element representing the component's output",
+    answer: 2,
     options: [
       { id: 1, option: "To define the component's styles" },
       { id: 2, option: "To return a React element representing the component's output" },
