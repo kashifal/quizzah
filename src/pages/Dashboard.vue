@@ -52,10 +52,13 @@
               <tbody class="divide-y divide-gray-200 bg-white">
                 <tr v-for="history in store.state.quizHistoryModule.quiz_history" :key="history.score">
                   <td class="whitespace-nowrap py-4 pl-4 pr-3 text-left text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">{{history.language.language}}</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500">{{history.percentage >= 60 ? 'Passed' : 'Failed'}}</td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500">{{history.percentage.toFixed(1)}}%</td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500"><i :class="history.percentage >= 60 ? 'fa text-sm fa-angle-double-up text-green-600' : 'fa text-sm fa-angle-double-down text-rose-600'"></i></td>
-                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500"><i :class="history.percentage >= 60 ? 'fa text-sm fa-download text-green-600' : 'fa text-sm fa-refresh text-rose-600'"></i></td>
+                  <td class="whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500">{{history.score/history.total * 100 >= 60 ? 'Passed' : 'Failed'}}</td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500">{{history.score/history.total * 100}}%</td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm text-gray-500"><i :class="history.score/history.total * 100 >= 60 ? 'fa text-sm fa-angle-double-up text-green-600' : 'fa text-sm fa-angle-double-down text-rose-600'"></i></td>
+                  <td class="whitespace-nowrap text-left px-3 py-4 text-sm cursor-pointer text-gray-500">
+                  <i :class="history.score/history.total * 100 >= 60 ? 'fa text-sm fa-download text-green-600' : 'fa text-sm fa-refresh text-rose-600'"></i>
+                  <i class="ml-4" :class="history.score/history.total * 100 >= 60 ? 'fa text-sm fa-linkedin text-blue-600' : 'fa text-sm fa-info text-rose-600'"></i>
+                  </td>
                  
                 </tr>
                  
@@ -89,6 +92,7 @@ const HistoryOfQuiz = store.state.quizHistoryModule.quiz_history;
 function openDailog(){
   store.commit('dropdownModule/setDropdown');
 }
+ 
  
 </script>
 
