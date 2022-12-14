@@ -16,16 +16,16 @@
     <div class="w-auto h-auto gap-x-4">
     <button class="py-1.5 px-3 text-rose-600 rounded     hover:text-rose-600 transition-all   text-sm font-normal">
     <i class="fa fa-angle-double-up animate-pulse  text-sm "></i> 
-     <span class="ml-1">Your Ranking </span></button>
+     <span class="ml-1">Your Average:  {{(store.state.quizHistoryModule.total_quiz_answers/store.state.quizHistoryModule.total_quiz_quetions ) * 100}}  / 100 %  </span></button>
       <button class="py-1.5 px-3 text-rose-600 rounded     hover:text-rose-600 transition-all   text-sm font-normal">
     <i class="fa fa-download  text-sm "></i> 
      <span class="ml-1">Get Report / Certificate </span></button>
     </div>
    </div>
    <div class="max-w-5xl h-auto grid grid-cols-1 mx-auto ">
-   <div class="w-full h-48 bg-rose-600 gradient__bg rounded"></div>
+   <div class="w-full h-48   gradient__bg rounded"></div>
    </div>
-   <div class="max-w-5xl h-auto grid grid-cols-1 mt-24 mx-auto " :class="store.state.quizHistoryModule.quiz_history.length === 0 ? 'hidden' : 'block' ">
+   <div class="max-w-5xl     h-auto  mt-24 mx-auto " :class="store.state.quizHistoryModule.quiz_history.length === 0 ? 'hidden' : 'block' ">
      <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
@@ -35,10 +35,10 @@
       
     </div>
     <div class="mt-8 flex flex-col">
-      <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="   sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 align-middle">
-          <div class="overflow-hidden shadow-sm ring-1 ring-black ring-opacity-5">
-            <table class="min-w-full divide-y divide-gray-300">
+          <div class="overflow-hidden shadow-sm  ">
+            <table class="min-w-full divide-y divide-gray-200">
               <thead class="bg-gray-50">
                 <tr>
                   <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 lg:pl-8">Language / Framework</th>
@@ -81,8 +81,7 @@
 </template>
 
 <script setup>  
-import { useStore } from "vuex"; 
-
+import { useStore } from "vuex";  
 
 
 const store = useStore();
@@ -92,7 +91,24 @@ const HistoryOfQuiz = store.state.quizHistoryModule.quiz_history;
 function openDailog(){
   store.commit('dropdownModule/setDropdown');
 }
+
+
+//   const c =
+//     typeof store.state.quizHistoryModule.quiz_history !== "undefined" && store.state.quizHistoryModule.quiz_history.length === 0
+//       ? ""
+//       : store.state.quizHistoryModule.quiz_history.map((item) => item.total).reduce(
+//           (prev, next) => prev + next
+//         );
+//         const d =
+//     typeof store.state.quizHistoryModule.quiz_history !== "undefined" && store.state.quizHistoryModule.quiz_history.length === 0
+//       ? ""
+//       : store.state.quizHistoryModule.quiz_history.map((item) => item.score).reduce(
+//           (prev, next) => prev + next
+//         );
  
+ 
+
+  
  
 </script>
 

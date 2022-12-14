@@ -60,9 +60,9 @@
             
             <div
             @click="nextQuestion()"
-              class="mt-6 px-3 py-1   ml-auto   transition-all text-right	 rounded   text-rose-500 hover:text-rode-600  cursor-pointer"
+              class="mt-6 px-3 py-1   ml-auto   transition-all text-right	 rounded   text-rose-400 hover:text-rode-600  cursor-pointer"
             >
-             <span class="ring-1 ring-rose-500 px-2 py-1 rounded bg-white hover:bg-rose-500 hover:text-white"> Skip <i class="fa fa-angle-double-right"></i></span>
+             <span class="   px-2 py-1 rounded bg-white hover:bg-rose-500 hover:text-white"> Skip <i class="fa fa-angle-double-right"></i></span>
               <br>
               <span class="text-[10px]">Note: You will get 0 score if skip question</span>
             </div>
