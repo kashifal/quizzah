@@ -1,16 +1,20 @@
 <template>
+<div class="">
+<PopMessage />
   <div class="overflow-x-hidden bg-gray-100 w-full pt-20 relative">
-  
     <div class="max-w-5xl mx-auto w-full h-auto pb-16 grid grid-cols-1">
       <div class="relative">
-      <div class="absolute  animate-rotate-half right-0">
-  <img class="w-24" :src='gift' alt="">
-  </div>
+        <div class="absolute animate-rotate-half right-0">
+          <img class="w-24" :src="gift" alt="" />
+        </div>
         <h1
           class="text-5xl font-semibold text-center leading-snug text-gray-700 mt-16"
         >
           We make coding
-          <span class="bg-custom-primary text-white px-1">interviews Easy </span> <br />
+          <span class="bg-custom-primary text-white px-1"
+            >interviews Easy
+          </span>
+          <br />
           for you
         </h1>
         <div class="">
@@ -26,24 +30,26 @@
         >
           <button
             @click="openQuiz()"
-            class="bg-rose-600 text-white px-4 rounded hover:text-white py-2"
+            class="inline-flex w-full justify-center  border border-transparent bg-rose-500 px-4 py-2 text-base font-medium text-white shadow  hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
           >
             <i class="fa fa-play"></i> <span class="ml-2">Start Quiz</span>
           </button>
-              <!-- <router-link to="/home">Home</router-link> -->
+          <!-- <router-link to="/home">Home</router-link> -->
 
-          <router-link to="/dashboard"
-            class="hover:bg-rose-600 hover:text-white px-4 rounded ring-1 ring-rose-600 text-rose-600 py-2"
+          <router-link
+            to="/dashboard"
+            class="hover:bg-rose-600 hover:text-white bg-white px-4 shadow rounded-none text-custom-text py-2"
           >
             <i class="fa fa-dashboard"></i><span class="ml-2">My Stats</span>
           </router-link>
         </div>
       </div>
-     
     </div>
     <div class="max-w-5xl mx-auto mt-24 h-auto">
       <div class="">
-        <h1 class="font-semibold text-[#0d2234] text-2xl">Reviews From Students</h1>
+        <h1 class="font-semibold text-[#0d2234] text-2xl">
+          Reviews From Students
+        </h1>
       </div>
     </div>
 
@@ -54,7 +60,9 @@
     <div class="w-full h-auto mt-24">
       <div class="max-w-5xl mx-auto h-auto">
         <div class="max-w-full mx-auto">
-          <h1 class="font-semibold text-2xl text-left leading-snug text-[#0d2234]">
+          <h1
+            class="font-semibold text-2xl text-left leading-snug text-[#0d2234]"
+          >
             Your private dashboard
           </h1>
         </div>
@@ -62,7 +70,7 @@
           class="grid grid-cols-1 max-w-5xl ml-auto md:grid-cols-3 mt-10 gap-x-4"
         >
           <li
-            class="h-auto w-auto shadow-sm bg-white rounded px-2 font-light text-sm py-2 flex items-center"
+            class="h-auto w-auto shadow-sm bg-white rounded-none px-2 font-light text-sm py-2 flex items-center"
           >
             <span><i class="fa fa-dashboard text-green-600"></i></span>
             <span class="ml-2"> Test Clear Rate</span>
@@ -71,7 +79,7 @@
             >
           </li>
           <li
-            class="h-auto w-auto shadow-sm bg-white rounded px-2 font-light text-sm py-2 flex items-center"
+            class="h-auto w-auto shadow-sm bg-white rounded-none px-2 font-light text-sm py-2 flex items-center"
           >
             <span><i class="fa fa-globe text-rose-600"></i></span>
             <span class="ml-2"> Your Ranking</span>
@@ -80,7 +88,7 @@
             >
           </li>
           <li
-            class="h-auto shadow-sm w-auto bg-white rounded px-2 font-light text-sm py-2 flex items-center"
+            class="h-auto shadow-sm w-auto bg-white rounded-none px-2 font-light text-sm py-2 flex items-center"
           >
             <span><i class="fa fa-dashboard text-green-600"></i></span>
             <span class="ml-2"> Javascript</span>
@@ -91,10 +99,12 @@
         </ul>
       </div>
     </div>
-    <div class="w-full   h-auto relative   mt-24 pb-12">
+    <div class="w-full h-auto relative mt-24 pb-12">
       <div class="max-w-5xl h-auto pt-10 mx-auto">
         <div class="max-w-5xl mx-auto">
-          <h1 class="font-semibold text-left leading-snug text-2xl text-[#0d2234]">
+          <h1
+            class="font-semibold text-left leading-snug text-2xl text-[#0d2234]"
+          >
             Why you should take quiz ?
           </h1>
         </div>
@@ -102,7 +112,7 @@
           class="max-w-full h-auto mx-auto grid grid-cols-2 gap-x-4 sm:grid-cols-3 lg:grid-cols-4 pt-8"
         >
           <div
-            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer gradient__bg bg-rose-600 rounded"
+            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer gradient__bg bg-rose-600 rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one right-2"
@@ -133,7 +143,7 @@
             </div>
           </div>
           <div
-            class="card__quiz px-3 relative py-4  transition-all hover:scale-90 cursor-pointer bg-rose-600 gradient__bg rounded"
+            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer bg-rose-600 gradient__bg rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2"
@@ -164,7 +174,7 @@
             </div>
           </div>
           <div
-            class="card__quiz px-3 relative py-4  transition-all hover:scale-90 cursor-pointer bg-rose-600 gradient__bg rounded"
+            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer bg-rose-600 gradient__bg rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2"
@@ -195,7 +205,7 @@
             </div>
           </div>
           <div
-            class="card__quiz px-3 py-4 bg-rose-600  transition-all hover:scale-90 cursor-pointer gradient__bg relative rounded"
+            class="card__quiz px-3 py-4 bg-rose-600 transition-all hover:scale-90 cursor-pointer gradient__bg relative rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2"
@@ -229,54 +239,103 @@
         </div>
       </div>
     </div>
+    <div class="max-w-5xl mx-auto mt-24 py-4">
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-4 h-full">
+        <div class=" ">
+          <h1
+            class="font-semibold text-left leading-snug text-4xl text-[#0d2234]"
+          >
+            Get certificate after passing quiz
+          </h1>
+          <p class="text-lg mt-8 text-gray-700 font-light">
+            We have allotted
+            <span class="underline font-bold text-custom-primary">10,000</span>
+            certificates to those , who passed thier test's. Also, you can share
+            certificate on
+            <a href="#" class="text-blue-500 font-semibold underline"
+              >Linkedin </a
+            >and other social media.
+          </p>
+          <!-- tags -->
+          <div class="mt-8 w-full h-auto grid grid-cols-5 gap-x-2">
+            <div
+              class="px-3 py-2 cursor-pointer bg-white text-custom-text transition-all hover:bg-custom-primary hover:text-white shadow rounded-none text-sm flex items-center justify-center"
+            >
+              React
+            </div>
+            <div
+              class="px-3 py-2 cursor-pointer bg-white text-custom-text transition-all hover:bg-custom-primary hover:text-white shadow rounded-none text-sm flex items-center justify-center"
+            >
+              CSS
+            </div>
+            <div
+              class="px-3 py-2 cursor-pointer bg-white text-custom-text transition-all hover:bg-custom-primary hover:text-white shadow rounded-none text-sm flex items-center justify-center"
+            >
+              Laravel
+            </div>
+            <div
+              class="px-3 py-2 cursor-pointer bg-white text-custom-text transition-all hover:bg-custom-primary hover:text-white shadow rounded-none text-sm flex items-center justify-center"
+            >
+              HTML
+            </div>
+          </div>
+          <div class="">
+            <button
+              @click="openQuiz()"
+              class="text-white px-4 mt-8 shadow rounded-none bg-custom-primary hover:text-white hover:bg-custom-primary py-2"
+            >
+              <i class="fa fa-download"></i>
+              <span class="ml-2">Download</span>
+            </button>
+          </div>
+        </div>
 
+        <div class="relative py-">
+          <div
+            class="absolute h-16 w-16 flex items-center cursor-pointer justify-center bg-rose-100/50 hover:bg-rose-200/50 z-10 bottom-2 rounded-full left-2"
+          >
+            <i class="fa fa-download text-custom-primary animate-pulse"></i>
+          </div>
+          <img
+            :src="certificate"
+            class="rounded-none rotat-90 z-50 shadow-md"
+            style="z-index: 1000000"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 </template>
 
 <script setup>
+import {onMounted} from 'vue';
 import Scroller from "../components/Scroller.vue";
 import Footer from "../components/Footer.vue";
 import header_img from "../assets/header_image-5.png";
 import gift from "../assets/gift.png";
 import { useStore } from "vuex";
-import Tab from '../components/Tab.vue';
-
+import Tab from "../components/Tab.vue";
+import certificate from "../assets/certificate.png"; 
+import axios from 'axios';
+import PopMessage from '../components/PopMessage.vue';
 let store = useStore();
 
 function openQuiz() {
   store.commit("dropdownModule/setDropdown");
 }
 
+ 
+ 
 
 
-const strategies = [
-  {
-    id:1,
-    title: "Break the problem ",
-    paragraph: "Complex problems can be overwhelming, so it's important to break them down into smaller, more manageable pieces. This will help you focus on one aspect of the problem at a time and avoid getting bogged down by the overall complexity."
-  },
-  {
-    id:2,
-    title: "Use pseudo-code ",
-    paragraph: "Writing out your solution in plain language can help you clarify your thoughts and identify any potential issues before you start writing actual code. This process, known as pseudo-coding, can help you organize your thoughts and plan out your approach."
-  },
-  {
-    id:3,
-    title: "Research and learn",
-    paragraph: "If you're stuck on a problem, it can be helpful to search for similar problems and solutions online. Many programming communities, such as forums and online groups, are filled with experienced developers who are willing to help and share their knowledge."
-  },
-  {
-    id:4,
-    title: "Test your code",
-    paragraph: "As you're writing your code, it's important to test it regularly to ensure that it's working as intended. This will help you identify and fix any errors or issues as they arise, rather than trying to debug a large, complex program all at once."
-  },
-  {
-    id:5,
-    title: "Ask for help",
-    paragraph: "If you're truly stuck and unable to figure out a solution on your own, don't be afraid to ask for help. Many experienced programmers are happy to help others, and seeking out their advice can save you time and frustration in the long run."
-  }
-];
 
+ 
+//hohw node works
+ 
 </script>
 
 <style scoped></style>
+
+

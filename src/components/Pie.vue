@@ -1,48 +1,47 @@
 <template>
- <div class="bg-white p-6 rounded">
-  <h2>Most Quiz's</h2>
-  <div style="" class="mt-12 ">
-    <vue3-chart-js v-bind="{ ...pieChart }" />
+  <div class="bg-white shadow-lg rounded-none ">
+    <div class=" border-b-2 px-2 py-4">
+  <h1 class="text-sm font-normal text-gray-600 ">Your Monthly Progress {{props.gotted}}/{{props.total}}</h1>
+  </div> 
+<canvas id="myChart"></canvas>
   </div>
- </div>
 </template>
 
-<script>
-import Vue3ChartJs from "@j-t-mcc/vue3-chartjs";
+<script setup>
 
-export default {
-  name: "App",
-  components: {
-    Vue3ChartJs,
-  },
-  setup() {
-    const pieChart = {
-      type: "pie",
-      options: {
-        min: 0,
-        max: 100,
-        responsive: true,
-        plugins: {
-          legend: {
-            position: "bottom",
-          },
-        },
-        
-      },
-      data: {
-        labels: ["VueJs", "EmberJs", "ReactJs", "AngularJs"],
-        datasets: [
-          {
-            backgroundColor: ["#10b981", "#3b82f6", "#6366f1", "#f43f5e"],
-            data: [40, 20, 80, 10],
-          },
-        ],
-      },
-    };
+import {onMounted, watch, defineProps} from 'vue';
+import Chart from 'chart.js/auto'
 
-    return {
-      pieChart,
-    };
-  },
-};
+
+const props = defineProps({
+  total:Number,
+  gotted: Number
+})
+
+onMounted(() => {
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'pie',  
+    data: {
+      labels: ['Total Questions', 'Total Answers'],
+      datasets: [{
+        label: props.Number, 
+        data: [props.total, props.gotted],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+})
 </script>
+
+<style lang="scss" scoped>
+
+</style>

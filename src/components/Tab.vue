@@ -1,6 +1,6 @@
 <template>
     <div>
-<li @click="tab(id)"  :class="currentTab === id ? 'bg-custom-primary text-white' : 'bg-gray-100'"  class="text-sm text-custom-text px-2 py-3 text-center hover:bg-custom-primary hover:text-white rounded-full  cursor-pointer">
+<li @click="tab(id)"  :class="currentTab === id ? 'bg-custom-primary text-white' : 'bg-gray-100'"  class="text-sm text-custom-text px-2 py-3 text-center hover:bg-custom-primary hover:text-white rounded-none-full  cursor-pointer">
      {{title}}
      </li>
 
@@ -23,8 +23,7 @@ const props = defineProps({
 
 
 function tab(id){
-   currentTab = id;
-    console.log(currentTab, id);
+   currentTab = id; 
 }
 
 </script>

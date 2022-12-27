@@ -1,0 +1,175 @@
+{
+    "users" : [
+        {"name":"kashif", "email": "captainkashi4@gmail.com", "password":"123456", "id":"1"}
+    ],
+    "questionList":[ 
+        [
+          {
+            "languageId":1,
+            "language": "HTML"
+          },
+          {
+            "id": 1,
+            "question": "What is an HTML tag?",
+            "answer": 2,
+            "options": [
+              { "id": 1, "option": "A type of CSS style" },
+              { "id": 2, "option": "A container for content in a webpage" },
+              { "id": 3, "option": "A way to add comments to a webpage" },
+              { "id": 4, "option": "A method for linking to external resources" }
+            ]
+          },
+          {
+            "id": 2,
+            "question":
+              "Which HTML attribute is used to specify the URL of a link?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "href" },
+              { "id": 2, "option": "src" },
+              { "id": 3, "option": "link" },
+              { "id": 4, "option": "rel" }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "Which HTML element is used to create a table?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "table" },
+              { "id": 2, "option": "tbl" },
+              { "id": 3, "option": "tab" },
+              { "id": 4, "option": "data" }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "Which HTML element is used to create a list of items?",
+            "answer": 3,
+            "options": [
+              { "id": 1, "option": "dl" },
+              { "id": 2, "option": "ol" },
+              { "id": 3, "option": "ul" },
+              { "id": 4, "option": "li" }
+            ]
+          },
+          {
+            "id": 5,
+            "question": "Which HTML element is used to create a form?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "form" },
+              { "id": 2, "option": "input" },
+              { "id": 3, "option": "select" },
+              { "id": 4, "option": "button" }
+            ]
+          },
+          {
+            "id": 6,
+            "question": "Which HTML element is used to add a video to a webpage?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "video" },
+              { "id": 2, "option": "movie" },
+              { "id": 3, "option": "media" },
+              { "id": 4, "option": "clip" }
+            ]
+          },
+          {
+            "id": 7,
+            "question": "Which HTML element is used to create a hyperlink?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "a" },
+              { "id": 2, "option": "link" },
+              { "id": 3, "option": "href" },
+              { "id": 4, "option": "url" }
+            ]
+          }
+        ],
+        [
+          {
+            "languageId":2,
+            "language": "HTML5"
+          },
+          {
+            "id": 1,
+            "question": "What is an HTML tag?",
+            "answer": 2,
+            "options": [
+              { "id": 1, "option": "A type of CSS style" },
+              { "id": 2, "option": "A container for content in a webpage" },
+              { "id": 3, "option": "A way to add comments to a webpage" },
+              { "id": 4, "option": "A method for linking to external resources" }
+            ]
+          },
+          {
+            "id": 2,
+            "question":
+              "Which HTML attribute is used to specify the URL of a link?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "href" },
+              { "id": 2, "option": "src" },
+              { "id": 3, "option": "link" },
+              { "id": 4, "option": "rel" }
+            ]
+          },
+          {
+            "id": 3,
+            "question": "Which HTML element is used to create a table?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "table" },
+              { "id": 2, "option": "tbl" },
+              { "id": 3, "option": "tab" },
+              { "id": 4, "option": "data" }
+            ]
+          },
+          {
+            "id": 4,
+            "question": "Which HTML element is used to create a list of items?",
+            "answer": 3,
+            "options": [
+              { "id": 1, "option": "dl" },
+              { "id": 2, "option": "ol" },
+              { "id": 3, "option": "ul" },
+              { "id": 4, "option": "li" }
+            ]
+          },
+          {
+            "id": 5,
+            "question": "Which HTML element is used to create a form?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "form" },
+              { "id": 2, "option": "input" },
+              { "id": 3, "option": "select" },
+              { "id": 4, "option": "button" }
+            ]
+          },
+          {
+            "id": 6,
+            "question": "Which HTML element is used to add a video to a webpage?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "video" },
+              { "id": 2, "option": "movie" },
+              { "id": 3, "option": "media" },
+              { "id": 4, "option": "clip" }
+            ]
+          },
+          {
+            "id": 7,
+            "question": "Which HTML element is used to create a hyperlink?",
+            "answer": 1,
+            "options": [
+              { "id": 1, "option": "a" },
+              { "id": 2, "option": "link" },
+              { "id": 3, "option": "href" },
+              { "id": 4, "option": "url" }
+            ]
+          }
+        ]
+    ]
+}
