@@ -14,7 +14,7 @@ let name = $ref('kashif');
 <Navar />
 <Modal />
 <router-view></router-view>
- 
+ <Footer></Footer>
 </div>
 </template>
 

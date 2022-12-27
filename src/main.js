@@ -2,15 +2,17 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router'; 
 
 import Home from './pages/Home.vue';
-import Dashboard from './pages/Dashboard.vue'; 
+import Dashboard from './pages/Dashboard.vue';  
+import Leaderboard from "./pages/Leaderboard.vue";  
+import Authenticate from "./pages/Authenticate.vue";  
+import Test from "./pages/Test.vue";  
 import store from './store/index';
 
 
 import './style.css'
 import App from './App.vue'
 
-
-console.log(Dashboard);
+ 
 let router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -21,6 +23,15 @@ let router = createRouter({
     {
       path: "/dashboard",
       component: Dashboard,
+    },
+    {
+      path: "/leaders",
+      component: Leaderboard,
+    },
+
+    {
+      path: "/auth",
+      component: Authenticate,
     },
   ],
 });
