@@ -4,9 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './pages/Home.vue';
 import Dashboard from './pages/Dashboard.vue';  
 import Leaderboard from "./pages/Leaderboard.vue";  
-import Authenticate from "./pages/Authenticate.vue";  
-import typing from "./pages/typingtest.vue";  
-import Test from "./pages/Test.vue";  
+import Authenticate from "./pages/Authenticate.vue";   
 import store from './store/index';
 
 
@@ -33,11 +31,7 @@ let router = createRouter({
     {
       path: "/auth",
       component: Authenticate,
-    },
-    {
-      path: "/typing-test",
-      component: typing,
-    },
+    }, 
   ],
 });
 
