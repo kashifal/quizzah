@@ -3,14 +3,14 @@
     <div class="h-16 max-w-5xl mx-auto flex items-center justify-between">
       <div class="" >
         <router-link to="/">
-          CodeCuest <span class="text-sm text-rose-600">.com</span>
+          QuestioNour <span class="text-sm text-custom-primary">.com</span>
         </router-link>
       </div>
       <div class="flex items-center gap-x-4">
         <ul class="flex gap-x-4">
           <router-link to="/dashboard">
             <li
-              class="text-sm text-custom-text font-light px-2 py-2 hover:bg-rose-600 hover:text-white rounded-none cursor-pointer shadow"
+              class="text-sm text-custom-text font-light px-2 py-2 hover:bg-custom-primary hover:text-white rounded-none cursor-pointer shadow"
             >
               <i class="fa fa-bar-chart"></i>
 
@@ -19,11 +19,20 @@
           </router-link>
           <router-link to="/leaders">
             <li
-              class="text-sm text-custom-text font-light px-2 py-2 hover:bg-rose-600 hover:text-white rounded-none cursor-pointer shadow"
+              class="text-sm text-custom-text font-light px-2 py-2 hover:bg-custom-primary hover:text-white rounded-none cursor-pointer shadow"
             >
               <i class="fa fa-trophy"></i>
 
               Leadersboard
+            </li>
+          </router-link>
+           <router-link to="/typing-test">
+            <li
+              class="text-sm text-custom-text font-light px-2 py-2 hover:bg-custom-primary hover:text-white rounded-none cursor-pointer shadow"
+            >
+              <i class="fa fa-keyboard-o"></i>
+
+              Typing Test
             </li>
           </router-link>
         </ul>
@@ -45,11 +54,11 @@
           <button
             :class="
               store.state.dropdownModule.dropdown
-                ? 'bg-rose-600 transition-all	 text-white'
-                : 'bg-rose-600 transition-all	 text-white'
+                ? 'bg-custom-primary transition-all	 text-white'
+                : 'bg-custom-primary transition-all	 text-white'
             "
             @click="openDrop"
-            class="px-3 py-2 rounded-none text-sm transition-all bg-rose-600"
+            class="px-3 py-2 rounded-none text-sm transition-all bg-custom-primary"
           >
             Select Your Language
             <span

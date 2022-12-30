@@ -239,7 +239,7 @@
                           :class="
                             (history.score / history.total) * 100 >= 60
                               ? 'fa text-sm fa-angle-double-up text-green-600'
-                              : 'fa text-sm fa-angle-double-down text-rose-600'
+                              : 'fa text-sm fa-angle-double-down text-custom-primary'
                           "
                         ></i>
                       </td>
@@ -250,7 +250,7 @@
                           :class="
                             (history.score / history.total) * 100 >= 60
                               ? ''
-                              : 'fa text-sm fa-refresh text-rose-600'
+                              : 'fa text-sm fa-refresh text-custom-primary'
                           "
                         ></i>
                         <i
@@ -258,7 +258,7 @@
                           :class="
                             (history.score / history.total) * 100 >= 60
                               ? 'fa text-sm fa-linkedin text-blue-600'
-                              : 'fa text-sm fa-info text-rose-600'
+                              : 'fa text-sm fa-info text-custom-primary'
                           "
                         ></i>
                       </td>

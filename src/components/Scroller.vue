@@ -4,7 +4,7 @@
   >
     <div class="card gap-x-2 h-full break-words flex shadow p-4 rounded-none bg-white">
       <div class="h-full w-auto bg-blue-400 rounded-none-full inline-flex">
-        <span class="h-12 w-12 bg-rose-600 rounded-none-full overflow-hidden">
+        <span class="h-12 w-12 bg-custom-primary rounded-none-full overflow-hidden">
         <img class="" src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
         </span>
       </div>
@@ -16,7 +16,7 @@
     </div>
  <div class="card gap-x-2 h-full break-words flex shadow p-4 rounded-none bg-white">
       <div class="h-full w-auto bg-blue-400 rounded-none-full inline-flex">
-        <span class="h-12 w-12 bg-rose-600 rounded-none-full overflow-hidden">
+        <span class="h-12 w-12 bg-custom-primary rounded-none-full overflow-hidden">
         <img class="" src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
         </span>
       </div>
@@ -28,7 +28,7 @@
     </div>
   <div class="card gap-x-2 h-full break-words flex shadow p-4 rounded-none bg-white">
       <div class="h-full w-auto bg-blue-400 rounded-none-full inline-flex">
-        <span class="h-12 w-12 bg-rose-600 rounded-none-full overflow-hidden">
+        <span class="h-12 w-12 bg-custom-primary rounded-none-full overflow-hidden">
         <img class="" src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
         </span>
       </div>
@@ -40,7 +40,7 @@
     </div>
    <div class="card gap-x-2 h-full break-words flex shadow p-4 rounded-none bg-white">
       <div class="h-full w-auto bg-blue-400 rounded-none-full inline-flex">
-        <span class="h-12 w-12 bg-rose-600 rounded-none-full overflow-hidden">
+        <span class="h-12 w-12 bg-custom-primary rounded-none-full overflow-hidden">
         <img class="" src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
         </span>
       </div>
@@ -52,7 +52,7 @@
     </div>
  <div class="card gap-x-2 h-full break-words flex shadow p-4 rounded-none bg-white">
       <div class="h-full w-auto bg-blue-400 rounded-none-full inline-flex">
-        <span class="h-12 w-12 bg-rose-600 rounded-none-full overflow-hidden">
+        <span class="h-12 w-12 bg-custom-primary rounded-none-full overflow-hidden">
         <img class="" src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
         </span>
       </div>
