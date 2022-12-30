@@ -21,8 +21,8 @@
                 </div>
               </div>
               <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-                <router-link to="/dashboard" class="inline-flex w-full justify-center  border border-transparent bg-rose-500 px-4 py-2 text-base font-medium text-white shadow  hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm" @click="open = false">Go to Dashboard</router-link> 
-                <button type="button" class="mt-3 inline-flex w-full justify-center shadow    bg-white px-4 py-2 text-base font-medium text-custom-text hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-rose-600 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm" @click="open = false" ref="cancelButtonRef">Later</button>
+                <router-link to="/dashboard" class="inline-flex w-full justify-center  border border-transparent bg-rose-500 px-4 py-2 text-base font-medium text-white shadow  hover:bg-custom-primary focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm" @click="open = false">Go to Dashboard</router-link> 
+                <button type="button" class="mt-3 inline-flex w-full justify-center shadow    bg-white px-4 py-2 text-base font-medium text-custom-text hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-custom-primary focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm" @click="open = false" ref="cancelButtonRef">Later</button>
               </div>
             </DialogPanel>
           </TransitionChild>

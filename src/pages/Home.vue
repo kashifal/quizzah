@@ -21,7 +21,7 @@
           <p
             class="font-light text-lg text-gray-600 max-w-2xl mx-auto mt-8 text-center"
           >
-            Welcome to Programming Interview Quizzet! Test your coding knowledge
+            Welcome to Programming Interview QuestioNour! Test your coding knowledge
             and skills with our challenging questions.
           </p>
         </div>
@@ -30,7 +30,7 @@
         >
           <button
             @click="openQuiz()"
-            class="inline-flex w-full justify-center  border border-transparent bg-rose-500 px-4 py-2 text-base font-medium text-white shadow  hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+            class="inline-flex w-full justify-center  border border-transparent bg-rose-500 px-4 py-2 text-base font-medium text-white shadow  hover:bg-custom-primary focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
           >
             <i class="fa fa-play"></i> <span class="ml-2">Start Quiz</span>
           </button>
@@ -38,7 +38,7 @@
 
           <router-link
             to="/dashboard"
-            class="hover:bg-rose-600 hover:text-white bg-white px-4 shadow rounded-none text-custom-text py-2"
+            class="hover:bg-custom-primary hover:text-white bg-white px-4 shadow rounded-none text-custom-text py-2"
           >
             <i class="fa fa-dashboard"></i><span class="ml-2">My Stats</span>
           </router-link>
@@ -74,14 +74,14 @@
           >
             <span><i class="fa fa-dashboard text-green-600"></i></span>
             <span class="ml-2"> Test Clear Rate</span>
-            <span class="text-rose-600 ml-auto"
+            <span class="text-custom-primary ml-auto"
               ><i class="fa fa-angle-down"></i> 45/100 %</span
             >
           </li>
           <li
             class="h-auto w-auto shadow-sm bg-white rounded-none px-2 font-light text-sm py-2 flex items-center"
           >
-            <span><i class="fa fa-globe text-rose-600"></i></span>
+            <span><i class="fa fa-globe text-custom-primary"></i></span>
             <span class="ml-2"> Your Ranking</span>
             <span class="text-green-500 ml-auto"
               ><i class="fa fa-angle-up"></i> 767</span
@@ -112,7 +112,7 @@
           class="max-w-full h-auto mx-auto grid grid-cols-2 gap-x-4 sm:grid-cols-3 lg:grid-cols-4 pt-8"
         >
           <div
-            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer gradient__bg bg-rose-600 rounded-none"
+            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer gradient__bg bg-custom-primary rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one right-2"
@@ -143,7 +143,7 @@
             </div>
           </div>
           <div
-            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer bg-rose-600 gradient__bg rounded-none"
+            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer bg-custom-primary gradient__bg rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2"
@@ -174,7 +174,7 @@
             </div>
           </div>
           <div
-            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer bg-rose-600 gradient__bg rounded-none"
+            class="card__quiz px-3 relative py-4 transition-all hover:scale-90 cursor-pointer bg-custom-primary gradient__bg rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2"
@@ -205,7 +205,7 @@
             </div>
           </div>
           <div
-            class="card__quiz px-3 py-4 bg-rose-600 transition-all hover:scale-90 cursor-pointer gradient__bg relative rounded-none"
+            class="card__quiz px-3 py-4 bg-custom-primary transition-all hover:scale-90 cursor-pointer gradient__bg relative rounded-none"
           >
             <p
               class="absolute text-5xl text-outline text-white shadow-sm one border-white right-2"

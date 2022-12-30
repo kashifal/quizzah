@@ -27,7 +27,7 @@
           >
             <div class="flex w-full justify-start gap-x-4 items-center">
               <div
-                class="h-10 min-w-10 flex items-center justify-center ring-1 bg-rose-500 ring-rose-600 px-4 text-white rounded-full"
+                class="h-10 min-w-10 flex items-center justify-center ring-1 bg-rose-500 ring-custom-primary px-4 text-white rounded-full"
               >
                 <p>
                   <span class="">Q{{ currentQ }}</span> / Q{{
@@ -40,7 +40,7 @@
                 :class="
                   timer < 10
                     ? 'ring-1 ring-rose-500 bg-rose-500 text-white'
-                    : 'ring-rose-600 ring-1 text-rose-600'
+                    : 'ring-custom-primary ring-1 text-custom-primary'
                 "
                 style="z-index: 1000000"
               >
@@ -63,7 +63,7 @@
                     store?.state?.openModalModule?.data[currentQ]?.answer
                   )
                 "
-                class="hover:text-white hover:bg-rose-600 cursor-pointer text-rose-600 ring-1 ring-rose-600 rounded-none px-2 py-1"
+                class="hover:text-white hover:bg-custom-primary cursor-pointer text-custom-primary ring-1 ring-custom-primary rounded-none px-2 py-1"
               >
                 <button class="text-[12px] py-1 cursor-pointer transition-all">
                   {{ option?.option }}
@@ -128,7 +128,7 @@
                   ? 'hidden'
                   : 'block'
               "
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded-none bg-white text-rose-600 transition-all hover:text-white hover:bg-rose-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-custom-primary rounded-none bg-white text-custom-primary transition-all hover:text-white hover:bg-custom-primary cursor-pointer"
             >
               Start Test <i class="fa fa-angle-double-right"></i>
             </div>
@@ -139,7 +139,7 @@
                   ? 'block'
                   : 'hidden'
               "
-              class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded-none bg-red-100 text-rose-600 transition-all hover:text-white hover:bg-rose-600 cursor-pointer"
+              class="mt-6 px-3 py-1 ring-1 ml-auto ring-custom-primary rounded-none bg-red-100 text-custom-primary transition-all hover:text-white hover:bg-custom-primary cursor-pointer"
             >
               close Modal <i class="fa fa-angle-double-right"></i>
             </div>
@@ -175,7 +175,7 @@
                       100 >=
                     70
                       ? 'bg-rose-500 px-1 py-1 text-white'
-                      : 'bg-gray-400 text-rose-600 px-1 py-1'
+                      : 'bg-gray-400 text-custom-primary px-1 py-1'
                   "
                   >Results <i class="fa fa-angle-double-right"></i>
                   {{
@@ -192,7 +192,7 @@
                       100 >=
                     50
                       ? 'bg-rose-500 px-1 py-1 text-white'
-                      : 'bg-gray-400 text-rose-600 px-1 py-1'
+                      : 'bg-gray-400 text-custom-primary px-1 py-1'
                   "
                   >{{
                     (score / (store.state.openModalModule.data.length - 1)) *
@@ -214,7 +214,7 @@
                     store.state.openModalModule.data[0]
                   )
                 "
-                class="mt-6 px-3 py-1 ring-1 ml-auto ring-rose-600 rounded-none bg-white text-rose-600 transition-all hover:text-white hover:bg-rose-600 cursor-pointer"
+                class="mt-6 px-3 py-1 ring-1 ml-auto ring-custom-primary rounded-none bg-white text-custom-primary transition-all hover:text-white hover:bg-custom-primary cursor-pointer"
               >
                 Give another shot <i class="fa fa-angle-double-right"></i>
               </div>
